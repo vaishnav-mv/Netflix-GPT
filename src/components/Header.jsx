@@ -19,7 +19,7 @@ const Header = () => {
         });
     }
     useEffect(()=>{
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe=onAuthStateChanged(auth, (user) => {
             if (user) {
               const {uid,email,displayName,photoURL} = user
               dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}))
@@ -32,6 +32,9 @@ const Header = () => {
 
             }
           });
+
+          return ()=> unsubscribe()  //unsubscribe when component unmounts
+
     },[])
     return (
         <div className="absolute px-12 py-2 bg-gradient-to-b from-black z-3 w-screen flex justify-between">
