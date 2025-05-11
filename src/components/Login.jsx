@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../utils/firebase"
 import { useDispatch } from "react-redux"
 import { addUser } from "../utils/userSlice"
+import { IMAGE, USER_URL } from "../utils/constants"
 
 const Login = () => {
   const dispatch = useDispatch()
@@ -32,7 +33,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: fullName.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/120664609?v=4"
+            photoURL: USER_URL
           }).then(() => {
             // Profile updated!
             const { uid, email, displayName, photoURL } = auth.currentUser
@@ -42,7 +43,7 @@ const Login = () => {
             // An error occurred
             setErrorMessage(error.message)
           });
-          console.log(user);
+          
 
 
         })
@@ -58,7 +59,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-          console.log(user);
+          
         })
         .catch((error) => {
 
@@ -79,7 +80,7 @@ const Login = () => {
       <Header></Header>
       <div className="absolute inset-0 ">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/69bec183-9cc8-49d4-8fc2-08228d3c91b4/web/IN-en-20250414-TRIFECTA-perspective_c8273fb1-8860-4ff5-bd1c-c2c4b44d5f2a_large.jpg"
+          src={IMAGE}
           className="w-full h-full object-cover"
         ></img>
       </div>
