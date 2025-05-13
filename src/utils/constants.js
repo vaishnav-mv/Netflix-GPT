@@ -9,4 +9,12 @@ export const API_OPTIONS = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYmFhYjM0NDIwMTEzNTY1ZDM1ZjQxNDcyNGRkY2UzNiIsIm5iZiI6MTc0NjcyNTMzOS44Miwic3ViIjoiNjgxY2U5ZGJkODNhMGQyYTM0MDFlYTZhIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.bMadNMCnBUm7IjRJLPvF2RBnG22dCyHRt0jBXlW877Q'
   }
   };
+
+export const IMG_CDN_URL="https://image.tmdb.org/t/p/w500"
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "malayalam", name: "Malayalam" },
+];
   
