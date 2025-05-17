@@ -6,7 +6,7 @@ export const API_OPTIONS = {
    method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYmFhYjM0NDIwMTEzNTY1ZDM1ZjQxNDcyNGRkY2UzNiIsIm5iZiI6MTc0NjcyNTMzOS44Miwic3ViIjoiNjgxY2U5ZGJkODNhMGQyYTM0MDFlYTZhIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.bMadNMCnBUm7IjRJLPvF2RBnG22dCyHRt0jBXlW877Q'
+    Authorization: 'Bearer '+ import.meta.env.VITE_TMDB_KEY
   }
   };
 
@@ -19,5 +19,5 @@ export const SUPPORTED_LANGUAGES = [
 ];
   
 
-
+export const OPENAI_API_KEY=import.meta.env.VITE_OPENAI_API_KEY
 
