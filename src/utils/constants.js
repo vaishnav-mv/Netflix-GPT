@@ -18,3 +18,6 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "malayalam", name: "Malayalam" },
 ];
   
+
+
+
